@@ -10,10 +10,10 @@
     @error "The normalize vertical-rhythm module only supports px inputs. The typey library is better.";
   }
   @if $unit == rem {
-    @return calc($value / $relative-to) * 1rem;
+    @return ($value / $relative-to) * 1rem;
   }
   @else if $unit == em {
-    @return calc($value / $relative-to) * 1em;
+    @return ($value / $relative-to) * 1em;
   }
   @else { // $unit == px
     @return $value;
